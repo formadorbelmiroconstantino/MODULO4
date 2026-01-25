@@ -8,9 +8,93 @@
 <body>
     <h1>Introdução ao Iframe</h1>
     <p>
+        Um iframe (Inline Frame) é um elemento HTML utilizado para incorporar um documento HTML externo dentro da página web actual, criando uma "janela" para outro conteúdo. Muito utilizado para vídeos (YouTube), mapas (Google Maps) e anúncios, ele é definido pela tag &lt;iframe&gt;, permitindo que sites exibam mídias interactivas ou documentos sem carregar a página inteira novamente. 
+    </p>
+
+    <h2>Principais Características e Atributos (HTML)</h2>
+<ul>
+    <li>
+        src: Define a URL do documento a ser incorporado.
+    </li>
+    <li>
+        width e height: Definem a largura e altura em pixels ou percentagem.
+    </li>
+    <li>
+        title: Essencial para acessibilidade, descreve o conteúdo para leitores de tela.
+    </li>
+    <li>
+        frameborder: Define se a borda é exibida (0 para ocultar, 1 para mostrar).
+    </li>
+    <li>
+        scrolling: Controla as barras de rolagem (yes, no, auto).
+    </li>
+</ul> 
+
+<h2>Estilização com CSS</h2>
+<p>Embora o HTML defina o tamanho, o CSS é usado para estilizar o comportamento do iframe, como remover bordas, definir tamanho responsivo ou adicionar sombras: </p>
+<p>
+    iframe { <br>
+    border: none; <br>
+    width: 100%; <br>
+    height: 500px; <br>
+}
+</p>
+
+<h2>Vantagens e Desvantagens</h2>
+<ul>
+    <li>
+        Vantagens: Incorporação fácil de conteúdo de terceiros, carregamento independente, e flexibilidade no layout.
+    </li>
+    <li>
+        Desvantagens: Pode afetar o desempenho da página, oferecer riscos de segurança se o conteúdo for malicioso, e prejudicar o SEO se utilizado indevidamente.
+    </li>
+        O iframe funciona como uma janela independente, permitindo que conteúdos de outras origens sejam integrados com segurança ao seu layout.
+</ul> 
+
+    <p>
         O elemento &lt;iframe&gt; continua sendo totalmente suportado e amplamente utilizado em HTML5 e CSS para incorporar documentos externos, vídeos (como YouTube), mapas (Google Maps) e outros conteúdos em uma página web. Ele é ideal para exibir conteúdo independente de forma segura e flexível. 
     </p>
 
-    
+    <ul>
+        <li>
+            Implementação HTML: Utiliza-se a tag &lt;iframe src="url"&gt;&lt;/iframe&gt; para carregar o conteúdo.
+        </li>
+        <li>
+            Estilização com CSS: Pode-se definir tamanho, bordas e posição usando CSS (ex: width, height, border), que substitui atributos antigos do HTML.
+        </li>
+        <li>
+            Segurança e Funcionalidades: Atributos modernos como sandbox restringem acções indesejadas, enquanto allowfullscreen permite visualização em tela cheia.
+        </li>
+        <li>
+            Considerações: Embora útil, seu uso excessivo pode afetar o SEO e a performance, sendo recomendado para incorporações de terceiros.
+        </li>
+    </ul>
+    <p>Abaixo está um exemplo básico de como utilizar um iframe com CSS para o site da ITFocursos:</p>
+    <p>&lt;iframe src="https://itfocursos.co.ao/" style="width: 100%; height: 300px; border: 2px solid #ccc;"&gt;&lt;/iframe&gt;</p>
+
+    <p><strong>Resultado:</strong></p>
+     <iframe src="https://itfocursos.co.ao/" style="width: 100%; height: 300px; border: 2px solid #ccc;"><a href="https://itfocursos.co.ao/" target="_blank">Site da ITFocursos</a></iframe>
+
+     <p>Pesquise pelo repositório do formador <iframe src="https://github.com/formadorbelmiroconstantino" frameborder="0">Belmiro Constantino</iframe><a href="https://github.com/formadorbelmiroconstantino" target="_blank">GitHub do Formador Belmiro Constantino</a></p>
+
+     <p>A dimensão padrão de um elemento &lt;iframe&gt; no HTML e CSS é de 300 pixels de largura (width) por 150 pixels de altura (height). Caso não sejam definidos tamanhos via atributos HTML (width/height) ou CSS, os navegadores adoptam esse tamanho padrão, que pode ser ajustado para garantir uma melhor visualização do conteúdo incorporado.</p> 
+
+     <h2>Detalhes Sobre as Dimensões do Iframe:</h2>
+<ul>
+    <li>
+        Padrão: 300px (largura) x 150px (altura).
+    </li>
+<li>
+    Ajuste via HTML: Utiliza-se os atributos width="600" e height="400" diretamente na tag &lt;iframe&gt;.
+
+</li>
+<li>
+    Ajuste via CSS: Utiliza-se iframe { width: 100%; height: 500px; } para definir tamanhos responsivos ou fixos.
+</li>
+<li>
+    Comportamento: Se o conteúdo for maior que o iframe, barras de rolagem (scrolling) aparecerão automaticamente, a menos que sejam desativadas.
+    </li>
+</ul> 
+
 </body>
 </html>
