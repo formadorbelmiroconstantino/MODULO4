@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+        }
+
+        iframe {
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+
+        /* Container para manter a proporção */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding-top: 56.25%;
+            /* Proporção 16:9 */
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Inconvenientes do Iframe</h1>
+    <p>
+        Os iframes (&lt;iframe&gt;) em HTML/CSS permitem incorporar documentos externos, mas apresentam inconvenientes
+        significativos, incluindo tempo de carregamento elevado, riscos de segurança (XSS), dificuldades de SEO, Indexação e
+        manutenção complexa de estilos. Eles geram uma estrutura de código confusa, com rolagens independentes, e são
+        dependentes do navegador.
+    </p>
+    <h2>Abaixo, estão os principais inconvenientes detalhados:</h2>
+    <ul>
+        <li>
+            Problemas de Segurança: Iframes podem ser utilizados para ataques de Cross-Site Scripting (XSS) ou
+            "clickjacking" se incorporarem sites de terceiros não confiáveis.
+        </li>
+        <li>
+            SEO e Indexação: Mecanismos de busca podem ter dificuldade em indexar ou relacionar o conteúdo dentro do
+            iframe com a página principal.
+        </li>
+        <li>
+            Performance: Aumentam o tempo de carregamento da página, pois cada iframe é um novo documento carregado,
+            consumindo mais recursos do navegador.
+        </li>
+        <li>
+            Estilização e Responsividade: Aplicar CSS de forma consistente dentro de um iframe a partir da página
+            principal é difícil. Eles não se adaptam bem ao tamanho da tela (responsividade) e frequentemente criam
+            barras de rolagem duplas ou indesejadas.
+        </li>
+        <li>
+            Experiência do Usuário (UX): Conteúdo dentro de um iframe pode ser confuso para o usuário, especialmente em dispositivos móveis, dificultando a navegação.
+        </li>
+        <li>
+            Acessibilidade e Usabilidade: Podem causar problemas de acessibilidade para leitores de tela e dificultar a navegação por teclado. 
+        </li>
+    </ul>
+    <p>Quando evitar: Para menus, tabelas ou conteúdo que deveria ser parte da estrutura principal da página, recomenda-se o uso de &lt;div&gt; ou &lt;iframe&gt; apenas para conteúdos isolados e confiáveis.</p>
+</body>
+
+</html>

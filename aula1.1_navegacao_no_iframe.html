@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+        }
+        iframe {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+/* Container para manter a proporção */
+.iframe-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* Proporção 16:9 */
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Navegação no Iframe</h1>
+<p>
+    A navegação em um &lt;iframe&gt; HTML é realizada vinculando links (&lt;a&gt;) ao atributo name do iframe usando o atributo target. Isso permite carregar diferentes páginas ou conteúdos externos (vídeos, mapas) dentro de uma área específica da página principal, mantendo a estrutura fixa. CSS é usado para estilizar o iframe, definindo tamanho, bordas e responsividade. 
+</p>
+
+<h2>Como Criar Navegação em Iframe (Passo a Passo)</h2>
+<ol>
+    <li>
+        Defina o Iframe: Crie um &lt;iframe&gt; com um nome único no HTML.
+    </li>
+</ol>
+<p>
+   <strong> No HTML</strong> <br><br>
+    &lt;iframe name="meuFrame" src="paginas/pagina1.html" width="100%" height="300px"&gt;&lt;/iframe&gt;
+</p>
+<ol>
+    <li value="2">
+        Crie os Links: Utilize a tag <a> com o atributo target apontando para o nome do iframe.
+    </li>
+</ol>
+<p>
+    &lt;a href="paginas/pagina1.html" target="meuFrame"&gt;Página 1&lt;/a&gt; <br>
+    &lt;a href="paginas/pagina2.html" target="meuFrame"&gt;Página 2&lt;/a&gt;
+</p>
+   <p><strong>Resultado:</strong></p>
+ 
+   <ul>
+    <li>
+        <a href="paginas/pagina1.html" target="meuFrame">Página 1</a>
+    </li>
+    <li>        
+<a href="paginas/pagina2.html" target="meuFrame">Página 2</a>
+    </li>
+   </ul>
+
+<iframe name="meuFrame" src="paginas/pagina1.html" width="100%" height="300px"></iframe>
+<hr>
+<h2>Dicas de CSS para Iframe</h2>
+<ul>
+    <li>
+        Responsividade: Utilize width: 100% e height: auto (ou vh) para ajustar ao tamanho da tela.
+    </li>
+    <li>
+        Estilização: Remova bordas ou adicione estilos personalizados:
+    </li>
+</ul>
+<strong> No CSS</strong>
+<p>
+    iframe { <br>
+  border: 2px solid #ccc; <br>
+  border-radius: 8px; <br>
+} <br>
+</p>
+<hr>
+<h2>Considerações Importantes</h2>
+<ul>
+    <li>
+        Conteúdo Externo: O &lt;iframe&gt; é ideal para incorporar componentes de terceiros como mapas e vídeos.
+    </li>
+    <li>
+        Segurança: Use o atributo sandbox no iframe para restringir permissões de scripts ou formulários, se necessário.
+</li>
+    <li>
+        Alternativas: Para navegação interna, a estruturação com links internos (IDs) também pode ser utilizada. 
+    </li>
+</ul>
+
+<!-- Menu de Navegação -->
+<nav>
+  <ul>
+    <li><a href="paginas/pagina1.html" target="janela_principal">Página 1</a></li>
+    <li><a href="https://www.wikipedia.org" target="janela_principal">Wikipedia</a></li>
+  </ul>
+</nav>
+
+<!-- O Iframe -->
+<iframe 
+  src="paginas/pagina1.html"
+  name="janela_principal" 
+  width="100%" 
+  height="500px" 
+  style="border:1px solid black;">
+</iframe>
+<p>Além do parâmetro scr, também existe o atributo srcdoc. </p>
+</body>
+</html>

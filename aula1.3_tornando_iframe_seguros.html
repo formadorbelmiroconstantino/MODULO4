@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+        }
+
+        iframe {
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+
+        /* Container para manter a proporção */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding-top: 56.25%;
+            /* Proporção 16:9 */
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tornando o Iframe Seguro</h1>
+    <p>Para tornar iframes mais seguros em HTML e CSS, utilize o atributo sandbox para restringir comportamentos
+        indesejados (scripts, formulários), implemente allow para políticas de permissão granular (como limitar uso de
+        câmara/microfone), e prefira carregar o conteúdo via HTTPS para evitar conteúdo misto. O uso de loading="lazy"
+        melhora a performance, carregando o iframe apenas quando necessário.
+    </p>
+    <h2>Abaixo estão as principais práticas para aumentar a segurança de iframes:</h2>
+
+    <h3>1. HTML5 Sandbox (Atributo Crítico) </h3>
+    <p>O atributo sandbox aplica restrições ao conteúdo carregado. Se for utilizado vazio (sandbox=""), restringe tudo.
+        Para permitir funcionalidades específicas, adicione permissões, como sandbox="allow-scripts allow-same-origin".
+    </p>
+    <ul>
+        <li>
+            Recomendação: Apenas habilite o que for estritamente necessário. Evite usar allow-scripts e
+            allow-same-origin juntos, pois isso pode permitir que o iframe contorne as restrições da política de mesma
+            origem (Same-Origin Policy).
+        </li>
+    </ul>
+    <h3>2. Política de Permissões (allow)</h3>
+    <p>Com a tag allow, você controla quais recursos do navegador o iframe pode acessar (como geolocalização, câmera ou
+        microfone). </p>
+    <ul>
+        <li>
+            Exemplo: &lt;iframe src="site.com" allow="camera 'none'; microphone 'none'"&gt;&lt;/iframe&gt;
+        </li>
+        <li>
+            Tela Cheia: Use allowfullscreen apenas se necessário.
+        </li>
+    </ul>
+    <h3>3. HTTPS Obrigatório</h3>
+    <p>Certifique-se de que o atributo src do iframe utilize https://. Se o seu site é seguro (HTTPS) e o iframe é
+        inseguro (HTTP), o navegador bloqueará o conteúdo, protegendo o usuário de "conteúdo misto". </p>
+
+    <h3>4. loading="lazy" </h3>
+    <p>Para performance e segurança na experiência do utilizador, utilize loading="lazy". Isso impede que o iframe carregue
+        imediatamente, o que poupa recursos e diminui a chance de scripts maliciosos rodarem antes que o usuário
+        interaja com a página. </p>
+    <h3>5. Configurações de CSS</h3>
+    <ul>
+        <li>
+            Esconder bordas: Evite o antigo frameborder="0" e prefira CSS: iframe { border: none; }.
+        </li>
+        <li>
+            Dimensões: Defina tamanhos claros para evitar que o iframe se expanda inesperadamente.
+        </li>
+    </ul>
+    <h4>Exemplo Completo Seguro:</h4>
+    <p>
+        &lt;iframe 
+  src="https://www.site-seguro.com" 
+  sandbox="allow-scripts" 
+  allow="camera 'none'; microphone 'none'"
+  loading="lazy"
+  style="border:none; width:100%; height:400px;"&gt;
+&lt;/iframe&gt;
+
+    </p>
+    <p><strong>Observação:</strong>
+        Essas práticas limitam o alcance de um possível iframe malicioso, protegendo os dados da sua página principal. 
+    </p>
+</body>
+
+</html>
