@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+        }
+
+        iframe {
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+
+        /* Container para manter a proporção */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding-top: 56.25%;
+            /* Proporção 16:9 */
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bloquear o aula1.3.1.html</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus praesentium possimus soluta asperiores error!
+        Consequatur dolorum asperiores perspiciatis omnis impedit adipisci inventore, dolores voluptate ipsum optio amet
+        a est quo.</p>
+    <iframe src="aula1.3.1_tornando_iframe_seguros.html" referrerpolicy="no-referrer" sandbox="sandbox"
+        frameborder="0"></iframe>
+    <p>Este código HTML define um iframe com foco total em segurança e privacidade para carregar uma página interna.
+    </p>
+    <h2>Abaixo está o que cada parte significa:</h2>
+    <ul>
+        <li>
+            src="aula1.3.1_tornando_iframe_seguros.html": Define o arquivo local que será carregado dentro do quadro.
+        </li>
+        <li>
+            referrerpolicy="no-referrer": É uma medida de privacidade. Ela instrui o navegador a não enviar nenhuma
+            informação de referência (o endereço da página principal) para a página que está sendo carregada dentro do
+            iframe.
+        </li>
+        <li>
+            sandbox="sandbox": Ativa o nível máximo de restrição de segurança (caixa de areia). Ao usar apenas a
+            palavra-chave sandbox (ou sandbox=""), o navegador bloqueia quase tudo dentro do iframe, incluindo:
+        </li>
+        <ul>
+            <li>
+                Execução de scripts (JavaScript).
+            </li>
+            <li>
+                Envio de formulários.
+            </li>
+            <li>
+                Acesso a cookies e armazenamento local.
+            </li>
+            <li>
+                Abertura de janelas pop-up.
+            </li>
+        </ul>
+        <li>
+            frameborder="0": Remove a borda padrão do quadro para que ele se integre visualmente à página sem linhas divisórias. No entanto, não utilize esse atributo. Recomendamos que utilize o CSS para obter o mesmo efito.
+        </li>
+    </ul>
+
+    <h4>Resumo do comportamento</h4>
+<p>O conteúdo será exibido de forma estática e isolada. Como o sandbox está activado sem permissões extras (como allow-scripts), qualquer código interativo no arquivo aula1.3.1_tornando_iframe_seguros.html não funcionará.</p>
+</body>
+
+</html>

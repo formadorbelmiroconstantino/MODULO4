@@ -74,7 +74,8 @@
         inseguro (HTTP), o navegador bloqueará o conteúdo, protegendo o usuário de "conteúdo misto". </p>
 
     <h3>4. loading="lazy" </h3>
-    <p>Para performance e segurança na experiência do utilizador, utilize loading="lazy". Isso impede que o iframe carregue
+    <p>Para performance e segurança na experiência do utilizador, utilize loading="lazy". Isso impede que o iframe
+        carregue
         imediatamente, o que poupa recursos e diminui a chance de scripts maliciosos rodarem antes que o usuário
         interaja com a página. </p>
     <h3>5. Configurações de CSS</h3>
@@ -88,17 +89,45 @@
     </ul>
     <h4>Exemplo Completo Seguro:</h4>
     <p>
-        &lt;iframe 
-  src="https://www.site-seguro.com" 
-  sandbox="allow-scripts" 
-  allow="camera 'none'; microphone 'none'"
-  loading="lazy"
-  style="border:none; width:100%; height:400px;"&gt;
-&lt;/iframe&gt;
-
+        &lt;iframe
+        src="https://www.site-seguro.com"
+        sandbox="allow-scripts"
+        allow="camera 'none'; microphone 'none'"
+        loading="lazy"
+        style="border:none; width:100%; height:400px;"&gt;
+        &lt;/iframe&gt;
     </p>
+    <p><strong>Resultado:</strong></p>
+    <iframe src="https://www.itfocursos.co.ao" sandbox="allow-same-origin allow-forms allow-scripts"
+        allow="camera 'none'; microphone 'none'" loading="lazy" style="border:1; width:100%; height:400px;">
+    </iframe>
+
+    <ul>
+        <li>
+            sandbox="...": É uma camada de segurança que restringe o que o site dentro do iframe pode fazer.</li>
+        <ul>
+            <li>
+                allow-same-origin: Permite que o conteúdo mantenha sua origem (necessário para cookies e armazenamento).
+            </li>
+            <li>
+                allow-forms: Permite que o site dentro do iframe envie formulários.
+            </li>
+            <li>
+                allow-scripts: Permite a execução de JavaScript dentro do iframe.
+            </li>
+        </ul>
+        </li>
+        <li>
+            allow="camera 'none'; microphone 'none'": Define políticas de permissão. Aqui, ele proíbe explicitamente o
+            acesso à câmara e ao microfone pelo site incorporado.</li>
+        <li>
+            loading="lazy": Melhora a performance do seu site. O iframe só será carregado quando o utilizador rolar a
+            página até onde ele estiver localizado.
+        </li>
+    </ul>
+
     <p><strong>Observação:</strong>
-        Essas práticas limitam o alcance de um possível iframe malicioso, protegendo os dados da sua página principal. 
+        Essas práticas limitam o alcance de um possível iframe malicioso, protegendo os dados da sua página principal.
     </p>
 </body>
 
