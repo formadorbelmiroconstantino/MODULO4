@@ -17,3 +17,19 @@ CSS na home:
         }
 </style>
 HTML na section telem da index para carregar a home
+<section id="telemovel">
+<iframe src="home.html" name="tela" id="tela" frameborder="0"></iframe>
+</section>
+Ver o resto do CSS em style.css
+
+Aula 2.3 - Criando os Botões para Redes Sociais
+Conteúdo da section com id redes_sociais:
+     <section id="redes_sociais">
+            <a href="" target="tela"><img src="img/logo-home.jpg" alt="Home"></a> <br>
+            <a href="" target="tela"><img src="img/logo-facebook.jpg" alt="Facebook"></a> <br>
+            <a href="" target="tela"><img src="img/logo-youtube.jpg" alt="Youtube"></a> <br>
+            <a href="" target="tela"><img src="img/logo-instagram.jpg" alt="Instagram"></a> <br>
+            <a href="" target="tela"><img src="img/logo-github.jpg" alt="GitHub"></a> <br>
+            <a href="" target="tela"><img src="img/logo-twitter.jpg" alt="Twitter"></a>
+        </section>
+Utilizamos br porque ate ao momento ainda nao ensinamos Grid Layout ou FlexBox.

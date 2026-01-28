@@ -23,6 +23,7 @@ main{
     background-color: green;*/
 }
 
+/*INICIO SECTION TELEMOVEL*/
 section#telemovel{
     position: absolute;
     top: 50%;
@@ -44,3 +45,26 @@ iframe#tela{
     width: 269px;
     height: 471px;
 }
+/*FIM SECTION TELEMOVEL*/
+
+/*INICIO SECTION REDES SOCIAIS*/
+section#redes_sociais{
+    text-align: right;
+}
+section#redes_sociais img{
+width: 50px;
+margin: 10px;
+border-radius: 50%;
+box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.503);
+box-sizing: border-box; /*Quando passar o mouse, nao vai dar o efeito a todos os botoes de uma vez*/
+}
+
+section#redes_sociais img:hover{
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    transform: translate(-5%, -5%); /*Movimentar os botoes ao passar o mouse*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.503);
+    transition: transform .5s; /*Da um tempo para o transform. Se quiser que a border tambem tenha uma lentidao para aparecer, poe uma virgula depois de .5s e adicionar border 3s*/
+}
+
+
+/*FIM SECTION REDES SOCIAIS*/
