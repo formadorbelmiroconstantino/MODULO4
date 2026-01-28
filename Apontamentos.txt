@@ -2,3 +2,18 @@ Aula 1 - O iframe Ainda Pode Ser Utilizado?
 
 Ver a Aula 8 do Módulo 4 - Dicas para Iframes Melhores
 Aula 2 - Criando um Projecto do Zero (Mostrando o projecto)
+Aula 2.1 - Criando a página inicial do projecto
+Aula 2.2 - Posicionando o conteúdo do site (Criando a home.html)
+CSS na home:
+<style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background: black url("img/tela-home.jpg") no-repeat top center;
+        }
+</style>
+HTML na section telem da index para carregar a home
