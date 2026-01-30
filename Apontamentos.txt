@@ -33,3 +33,6 @@ Conteúdo da section com id redes_sociais:
             <a href="" target="tela"><img src="img/logo-twitter.jpg" alt="Twitter"></a>
         </section>
 Utilizamos br porque ate ao momento ainda nao ensinamos Grid Layout ou FlexBox.
+O CSS dessa section esta em style.css 
+
+Aula 2.4 - Criando as páginas de cada rede social
